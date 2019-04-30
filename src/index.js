@@ -23,10 +23,11 @@ class App extends Component {
     counter: 0
   };
   handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
+    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState(state => ({ counter: state.counter + 1 }));
   };
   render() {
-    console.log("render");
+    //console.log("render");
     return (
       <Fragment>
         <h1>Hello Sergio</h1>
