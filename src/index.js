@@ -4,6 +4,14 @@ import { render } from "react-dom";
 
 //reuse alredy use insed of another one
 class Button extends Component {
+  static defaultProps = {
+    children: "Save"
+  };
+
+  static defaultProps = {
+    onClick: PropTypes.func.isRequired,
+    children: PropTypes.string
+  };
   render() {
     return (
       <a href="" onClick={this.props.onClick}>
@@ -12,15 +20,6 @@ class Button extends Component {
     );
   }
 }
-
-Button.defaultProps = {
-  children: "Save"
-};
-
-Button.defaultProps = {
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.string
-};
 
 //Create a component
 class App extends Component {
