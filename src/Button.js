@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { prototype } from "events";
+// import { prototype } from "events";
 
 const Button = props => (
   <button onClick={props.onClick}>{props.children}</button>
@@ -11,7 +11,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  onClick: Proptype.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   children: PropTypes.string
 };
 
