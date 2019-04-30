@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
 import { render } from "react-dom";
 
 //reuse alredy use insed of another one
@@ -12,6 +13,15 @@ class Button extends Component {
   }
 }
 
+Button.defaultProps = {
+  children: "Save"
+};
+
+Button.defaultProps = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.string
+};
+
 //Create a component
 class App extends Component {
   handleClick() {
@@ -21,8 +31,12 @@ class App extends Component {
     return (
       <Fragment>
         <h1>Hello Sergio</h1>
-        {/* <Button title="Jazzz" /> Proprity */}
-        <Button onClick={this.handleClick}>Jazzzzzz</Button>
+        <Button
+          onClick={() => {
+            alert("Button 1");
+          }}
+        />
+        <Button onClick={this.handleClick}>Send</Button>
       </Fragment>
     );
   }
