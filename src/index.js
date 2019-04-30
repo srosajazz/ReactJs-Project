@@ -7,8 +7,21 @@ class App extends Component {
   state = {
     counter: 0
   };
+
+  componentDidMount(prevProps, prevState) {}
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextState.counter <= 10;
+  // }
+
+  // componentWillMount() {}
+
   handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
+    //   this.setState({ counter: this.state.counter + 1 });
+    //   this.setState({ counter: this.state.counter + 1 });
+    // });
+    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState(state => ({ counter: state.counter + 1 }));
   };
   render() {
     //console.log("render");
