@@ -1,21 +1,6 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
 import { render } from "react-dom";
-
-//reuse alredy use insed of another one
-class Button extends Component {
-  static defaultProps = {
-    children: "Save"
-  };
-
-  static defaultProps = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string
-  };
-  render() {
-    return <button onClick={this.props.onClick}>{this.props.children}</button>;
-  }
-}
+import Button from "./Button";
 
 //Create a component
 class App extends Component {
@@ -23,8 +8,7 @@ class App extends Component {
     counter: 0
   };
   handleClick = () => {
-    this.setState(state => ({ counter: state.counter + 1 }));
-    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState({ counter: this.state.counter + 1 });
   };
   render() {
     //console.log("render");
