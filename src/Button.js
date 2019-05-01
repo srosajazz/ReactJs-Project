@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import { prototype } from "events";
 
 const Button = props => (
   <button onClick={props.onClick}>{props.children}</button>
